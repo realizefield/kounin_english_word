@@ -173,7 +173,7 @@ body{font-family:'Helvetica Neue',Arial,sans-serif;background:#f0f4f8;min-height
     </div>
     <div class="check-all-bar">
       <span id="starCountBadge" style="font-size:0.78rem;color:#f59e0b;font-weight:bold;align-self:center;">チェックなし</span>
-      <button class="btn-chk btn-chk-review" onclick="window.location.href='hs_review.html?t='+Date.now()">⭐ 復習テストへ</button>
+      <button class="btn-chk btn-chk-review"  disabled style="opacity:.45;cursor:default;">⭐ 復習テストへ（準備中）</button>
       <button class="btn-chk btn-chk-all" onclick="checkAll(true)">全チェック</button>
       <button class="btn-chk btn-chk-none" onclick="checkAll(false)">全解除</button>
     </div>
@@ -400,5 +400,6 @@ document.getElementById('btnAgain').addEventListener('click',()=>{document.getEl
 function goNext(){stopAuto();const n=currentStep+1;if(n>4)return;showStep(n);if(n===1){initFlash();startTimer();}else if(n===2)initTap();else if(n===3)initQuiz();else if(n===4)initSpell();}
 initWordList();showStep(0);
 </script>
+<script src="https://realizefield.github.io/gamba-kounin-seito/gamba-ai.js" defer></script>
 </body>
 </html>
